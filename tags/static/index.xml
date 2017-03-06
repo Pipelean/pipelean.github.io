@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Static on Pipelean Limited - Strategic and Architectural task force for UX and Technology challenges</title>
-    <link>https://pipelean.aerobatic.io/tags/static/index.xml</link>
+    <link>https://pipelean.github.io/tags/static/index.xml</link>
     <description>Recent content in Static on Pipelean Limited - Strategic and Architectural task force for UX and Technology challenges</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="https://pipelean.aerobatic.io/tags/static/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pipelean.github.io/tags/static/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hugo website, Aerobatic CDN, Forestry.io web dashboard and Git to bind them all [Tutorial]</title>
-      <link>https://pipelean.aerobatic.io/post/hugo-forestry-setup/</link>
+      <link>https://pipelean.github.io/post/hugo-forestry-setup/</link>
       <pubDate>Thu, 26 Jan 2017 12:15:00 +0100</pubDate>
       
-      <guid>https://pipelean.aerobatic.io/post/hugo-forestry-setup/</guid>
+      <guid>https://pipelean.github.io/post/hugo-forestry-setup/</guid>
       <description>
 
 &lt;p&gt;A brief tutorial to create a completely static website with a template engine, deployed to a CDN and with an admin dashboard for your content editors.&lt;/p&gt;
@@ -31,7 +31,7 @@ You know Git and how to use it.&lt;/p&gt;
 
 &lt;p&gt;Is beyond the scope of this article and in general beyond the scopeto both convince anyone about how good is life with a static site generator in place of a Wordpress (or Drupal, Joomla, you name it&amp;hellip;) or any PHP+MySQL+Server solution.&lt;/p&gt;
 
-&lt;p&gt;There is, in fact, &lt;a href=&#34;https://pipelean.aerobatic.io/post/cms-static-serverless&#34;&gt;this article I wrote&lt;/a&gt; on &lt;strong&gt;why&lt;/strong&gt; build a CMS solution without a server and &lt;strong&gt;how&lt;/strong&gt;. This other article is intended for a more generalist audience and explains what&amp;rsquo;s enough to understand the general architectural idea and, most important, the advantages both at development time and for the website runtime performances. That article can be seen as an introduction to this one but is not a prerequisite.&lt;/p&gt;
+&lt;p&gt;There is, in fact, &lt;a href=&#34;https://pipelean.github.io/post/cms-static-serverless&#34;&gt;this article I wrote&lt;/a&gt; on &lt;strong&gt;why&lt;/strong&gt; build a CMS solution without a server and &lt;strong&gt;how&lt;/strong&gt;. This other article is intended for a more generalist audience and explains what&amp;rsquo;s enough to understand the general architectural idea and, most important, the advantages both at development time and for the website runtime performances. That article can be seen as an introduction to this one but is not a prerequisite.&lt;/p&gt;
 
 &lt;h1 id=&#34;step-by-step&#34;&gt;Step by step&lt;/h1&gt;
 
@@ -124,7 +124,7 @@ Go to your like &lt;a href=&#34;http://samplehugo.aerobatic.io&#34;&gt;http://sa
 &lt;li&gt;challenge 2: let hugo render pages ready with Facebook Instant access code&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Get in touch if you want to know more about these topics. You can send us a message or schedule a call: we offer a 10 minutes introduction or 20 minutes consultancy format, for free of course. Choose &lt;a href=&#34;https://pipelean.aerobatic.io/page/get-in-touch&#34;&gt;your way to get in touch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get in touch if you want to know more about these topics. You can send us a message or schedule a call: we offer a 10 minutes introduction or 20 minutes consultancy format, for free of course. Choose &lt;a href=&#34;https://pipelean.github.io/page/get-in-touch&#34;&gt;your way to get in touch&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We know that digitalize your business is hard, we&amp;rsquo;re to offer a first aid kit that can eventually become a stable relation.&lt;/p&gt;
 
@@ -141,10 +141,10 @@ Go to your like &lt;a href=&#34;http://samplehugo.aerobatic.io&#34;&gt;http://sa
     
     <item>
       <title>Static, serverless CMS solution for the humans</title>
-      <link>https://pipelean.aerobatic.io/post/cms-static-serverless/</link>
+      <link>https://pipelean.github.io/post/cms-static-serverless/</link>
       <pubDate>Wed, 25 Jan 2017 18:18:24 +0100</pubDate>
       
-      <guid>https://pipelean.aerobatic.io/post/cms-static-serverless/</guid>
+      <guid>https://pipelean.github.io/post/cms-static-serverless/</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s always a good time to get rid of some old stuff.
