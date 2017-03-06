@@ -1,0 +1,19 @@
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#19b595+0,3690f0+67,54a3ee+100,6d97ed+100;Pipelean+%231 */
+
+#header {
+  /*background-image: url(""), url("");
+  background-image: url("images/overlay.png"), url("../images/bg.jpg");*/
+  background: rgb(25,181,149); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(25,181,149,1) 0%, rgba(54,144,240,1) 67%, rgba(84,163,238,1) 100%, rgba(109,151,237,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(25,181,149,1) 0%,rgba(54,144,240,1) 67%,rgba(84,163,238,1) 100%,rgba(109,151,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(25,181,149,1) 0%,rgba(54,144,240,1) 67%,rgba(84,163,238,1) 100%,rgba(109,151,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19b595', endColorstr='#6d97ed',GradientType=1 ); /* IE6-9 */
+}
+
+#sidebar ul li a a:visited {
+	color: #94CFE4;
+}
+
+#sidebar ul li a {
+	color: #94CFE4;
+}

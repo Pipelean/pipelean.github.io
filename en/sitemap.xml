@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/contact/</loc>
+    <lastmod>2017-01-28T12:19:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/post/hugo-forestry-setup/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/post/cms-static-serverless/</loc>
+    <lastmod>2017-01-25T18:18:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/post/avett-divorce/</loc>
+    <lastmod>2017-01-23T20:08:19+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/post/gradient/</loc>
+    <lastmod>2017-01-12T12:25:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/cms/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/categories/design/</loc>
+    <lastmod>2017-01-12T12:25:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/categories/entertainment/</loc>
+    <lastmod>2017-01-23T20:08:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/hugo/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/music/</loc>
+    <lastmod>2017-01-23T20:08:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/</loc>
+    <lastmod>2017-01-28T12:19:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/post/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/serverless/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/solution/</loc>
+    <lastmod>2017-01-25T18:18:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/static/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/categories/technology/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/trends/</loc>
+    <lastmod>2017-01-12T12:25:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/tutorial/</loc>
+    <lastmod>2017-01-26T12:15:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pipelean.aerobatic.io/tags/visual/</loc>
+    <lastmod>2017-01-12T12:25:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

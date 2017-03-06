@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pipelean Limited - Strategic and Architectural task force for UX and Technology challenges</title>
+    <link>https://pipelean.aerobatic.io/index.xml</link>
+    <description>Recent content on Pipelean Limited - Strategic and Architectural task force for UX and Technology challenges</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Sat, 28 Jan 2017 12:19:22 +0100</lastBuildDate>
+    <atom:link href="https://pipelean.aerobatic.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>contact</title>
+      <link>https://pipelean.aerobatic.io/contact/</link>
+      <pubDate>Sat, 28 Jan 2017 12:19:22 +0100</pubDate>
+      
+      <guid>https://pipelean.aerobatic.io/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo website, Aerobatic CDN, Forestry.io web dashboard and Git to bind them all [Tutorial]</title>
+      <link>https://pipelean.aerobatic.io/post/hugo-forestry-setup/</link>
+      <pubDate>Thu, 26 Jan 2017 12:15:00 +0100</pubDate>
+      
+      <guid>https://pipelean.aerobatic.io/post/hugo-forestry-setup/</guid>
+      <description>
+
+&lt;p&gt;A brief tutorial to create a completely static website with a template engine, deployed to a CDN and with an admin dashboard for your content editors.&lt;/p&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;You are a programmer and know how to build websites and understand the difference between a static site, a template generator for static site and a server that generates HTML pages dynamically from templates and data.
+You&amp;rsquo;re a little familiar with Jekyll or another static site generator: you know what they are and what they do, not necessarily already used once.
+You know Git and how to use it.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;re not afraid of change.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-and-how&#34;&gt;Why and How&lt;/h2&gt;
+
+&lt;p&gt;Is beyond the scope of this article and in general beyond the scopeto both convince anyone about how good is life with a static site generator in place of a Wordpress (or Drupal, Joomla, you name it&amp;hellip;) or any PHP+MySQL+Server solution.&lt;/p&gt;
+
+&lt;p&gt;There is, in fact, &lt;a href=&#34;https://pipelean.aerobatic.io/post/cms-static-serverless&#34;&gt;this article I wrote&lt;/a&gt; on &lt;strong&gt;why&lt;/strong&gt; build a CMS solution without a server and &lt;strong&gt;how&lt;/strong&gt;. This other article is intended for a more generalist audience and explains what&amp;rsquo;s enough to understand the general architectural idea and, most important, the advantages both at development time and for the website runtime performances. That article can be seen as an introduction to this one but is not a prerequisite.&lt;/p&gt;
+
+&lt;h1 id=&#34;step-by-step&#34;&gt;Step by step&lt;/h1&gt;
+
+&lt;p&gt;I will proceed with a step by step walktrough. If you&amp;rsquo;d like to read about the general solution before for an high level overview of how this works, the aforementioned article is what you need now.&lt;/p&gt;
+
+&lt;h3 id=&#34;static-site-with-hugo&#34;&gt;Static site with Hugo&lt;/h3&gt;
+
+&lt;p&gt;Is beyond the scope of this article to explain how a Hugo website is built. It&amp;rsquo;s not something you learn in 5 minutes but is pretty easy for the avarage programmer and one can be &lt;a href=&#34;http://hugo.io/2-minutes-tutorial&#34;&gt;generated in 2 minutes&lt;/a&gt;. That, or just &lt;a href=&#34;http://sample.site&#34;&gt;grab a sample one&lt;/a&gt; and move on.&lt;/p&gt;
+
+&lt;h3 id=&#34;git-on-bitbucket&#34;&gt;Git on Bitbucket&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s create a new private (and free) Git repository on bitbucket.
+Let&amp;rsquo;s also create and push a new empty branch called &amp;lsquo;hosting&amp;rsquo; (or whatever you like, but in this article we&amp;rsquo;ll refer to this branch with that label).&lt;/p&gt;
+
+&lt;p&gt;Now you can &amp;lsquo;git init&amp;rsquo; your hugo project locally and push it to master. Not to hosting, just to master.&lt;/p&gt;
+
+&lt;h3 id=&#34;setup-the-cdn-aerobatic&#34;&gt;Setup the CDN: Aerobatic&lt;/h3&gt;
+
+&lt;p&gt;Now is time to setup Aerobatic, which will be the CDN where we publish our website. Aerobatic is a standalone product, but is seamlessy integrated with bitbucket, and this is very convenient.&lt;/p&gt;
+
+&lt;p&gt;One: go to Aerobatic Settings in Bitbucket admin dashboard, create a new site with a new name. I will name it &amp;ldquo;hugosample&amp;rdquo; in this article. The the public URL will be hugosample.aerobatic.io and is now empty. Good.&lt;/p&gt;
+
+&lt;p&gt;Two: in Settings -&amp;gt; deploy branches: &lt;a href=&#34;https://bitbucket.org/pipeleancom/pipeleancom/addon/aerobatic-bitbucket-addon/aerobatic-app-dashboard&#34;&gt;https://bitbucket.org/pipeleancom/pipeleancom/addon/aerobatic-bitbucket-addon/aerobatic-app-dashboard&lt;/a&gt; with the wrong branch.&lt;/p&gt;
+
+&lt;p&gt;Now aerobatic is ready and will show on &lt;a href=&#34;http://hugosample.aerobatic.io&#34;&gt;http://hugosample.aerobatic.io&lt;/a&gt; whatever you have on the hosting branch. Now you do not have anything cause someone have to build your hugo website like you do locally from the command line. Who&amp;rsquo;s going to do it?&lt;/p&gt;
+
+&lt;h3 id=&#34;write-some-config-one-line&#34;&gt;Write some config (one line)&lt;/h3&gt;
+
+&lt;p&gt;Ok, now we have almost all the pieces in place.&lt;/p&gt;
+
+&lt;p&gt;Hugo sites has a main cofiguration file, called config.toml, in the project root. Open it, edit the baseURL property, which is normally the first line in the file, to something like:&lt;/p&gt;
+
+&lt;p&gt;baseurl = &amp;ldquo;&lt;a href=&#34;https://samplesite.aerobatic.io/&amp;quot;&#34;&gt;https://samplesite.aerobatic.io/&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Important: The final slash MUST be there, or your resources will not load properly.&lt;br /&gt;
+I know. I hate it too.  We can live with that.&lt;/p&gt;
+
+&lt;h3 id=&#34;build-hugo-in-the-cloud&#34;&gt;Build Hugo in the cloud&lt;/h3&gt;
+
+&lt;p&gt;Forestry will both build your Hugo project from master to hosting.&lt;/p&gt;
+
+&lt;p&gt;Signin to Forestry.io and create a new site. You&amp;rsquo;ll be asked for a repository and a hosting site. Pick bitbucket for both. Use &amp;ldquo;master&amp;rdquo; branch as repository and &amp;ldquo;hosting&amp;rdquo; branch for hosting.&lt;/p&gt;
+
+&lt;p&gt;[pictures]&lt;/p&gt;
+
+&lt;p&gt;Check Forestry build status icon [picture]
+Now check your Bitbucket repository commit. You should see something like this: [picture del commit su master, poi su master di forestry e poi su hosting sempre di forestry. ]&lt;/p&gt;
+
+&lt;h3 id=&#34;try-it-the-web-dashboard&#34;&gt;Try it: the web dashboard&lt;/h3&gt;
+
+&lt;p&gt;Forestry also provides a Web Dashboard to administer the site and for the content editors to do their job.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s open the project, create a new content and write something.&lt;/p&gt;
+
+&lt;p&gt;Click preview. Does the preview works? Good.
+Now publish it. There is very good chance that Forestry has succesfully built the Hugo project and pushed the result to the Git repository &amp;lsquo;hosting&amp;rsquo; branch which is finally published on your site.
+Go to your like &lt;a href=&#34;http://samplehugo.aerobatic.io&#34;&gt;http://samplehugo.aerobatic.io&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Do you see your site with your new content? Great!&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;re all set. The good guys have won.&lt;/p&gt;
+
+&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h3&gt;
+
+&lt;p&gt;Doesn&amp;rsquo;t work? I know, it does never work the first time. Here are a few things that could have gone wrong.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If the Hugo theme is a git submodule, you MUST have the .gitmodules file or Forestry won&amp;rsquo;t be able to checkout the whole code and so can&amp;rsquo;t built Hugo site.&lt;/li&gt;
+&lt;li&gt;in config.toml, baseUrl MUST contain the final slash!&lt;/li&gt;
+&lt;li&gt;is baseURL correct? Really?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Still doesn&amp;rsquo;t work? Ok, &lt;a href=&#34;http://twitter.com/ildella&#34;&gt;leave me a tweet&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;bonus-tip&#34;&gt;Bonus tip&lt;/h3&gt;
+
+&lt;p&gt;use bitbucket branch permission feature and allow no one to write on &amp;ldquo;hosting&amp;rdquo; and only trusted people to write on master. Forestry will continue to work as expected, you do not need to explicitely add a user for forestry inside bitbucket permission settings.&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-topics&#34;&gt;Advanced topics&lt;/h2&gt;
+
+&lt;p&gt;Some advanced topics we&amp;rsquo;ve faced to solve customers needs using this solution. A few are very hugo-specific, other need to be solved at the architecture level.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create hugo shortcodes: musixmatch&lt;/li&gt;
+&lt;li&gt;dynamic content example: features&lt;/li&gt;
+&lt;li&gt;creating a dev instance connected to a different branch: dev branch for the source, and dev-hosting. invece di farlo fare a forestry, e poi push a mano&lt;/li&gt;
+&lt;li&gt;asset management, galleries etc&amp;hellip; use the cloud, stupid!&lt;/li&gt;
+&lt;li&gt;latest hugo version has packages on git repo project &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;https://github.com/spf13/hugo/releases&lt;/a&gt; including the Ubuntu/Debian .deb package&lt;/li&gt;
+&lt;li&gt;challenge 1: automatically import dynamic content&lt;/li&gt;
+&lt;li&gt;challenge 2: let hugo render pages ready with Facebook Instant access code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Get in touch if you want to know more about these topics. You can send us a message or schedule a call: we offer a 10 minutes introduction or 20 minutes consultancy format, for free of course. Choose &lt;a href=&#34;https://pipelean.aerobatic.io/page/get-in-touch&#34;&gt;your way to get in touch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We know that digitalize your business is hard, we&amp;rsquo;re to offer a first aid kit that can eventually become a stable relation.&lt;/p&gt;
+
+&lt;h2 id=&#34;external-references&#34;&gt;External References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugostatic.io&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.com&#34;&gt;Bitbucket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aerobatic.io&#34;&gt;Aerobatic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forestry.io&#34;&gt;Forestry.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Static, serverless CMS solution for the humans</title>
+      <link>https://pipelean.aerobatic.io/post/cms-static-serverless/</link>
+      <pubDate>Wed, 25 Jan 2017 18:18:24 +0100</pubDate>
+      
+      <guid>https://pipelean.aerobatic.io/post/cms-static-serverless/</guid>
+      <description>
+
+&lt;p&gt;It&amp;rsquo;s always a good time to get rid of some old stuff.
+This is finally the time for old, cumbersome, heavy, higly coupled CMS solutions you&amp;rsquo;ve been forced to deal with since that horrible time in technology and internet between 2001 and 2008.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re here to finally free you.&lt;/p&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;You know how web sites are built, and understand what an HTML template engine do in a CMS solution. You know what a CMS solution is: a templating engine that can typically be extended with some form of plugin system, a Web dashboard for admins and content editors. Not much more.
+You are a developer or a developer manager or someone who deal with people who build web sites and are looking for a better solution than your old CMS.&lt;/p&gt;
+
+&lt;p&gt;You are not afraid of change.&lt;/p&gt;
+
+&lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
+
+&lt;p&gt;Static sites are good, and static generators make it easy to build them. The drawback is that content is a Markdown file inside the source code folders, and that is really &lt;strong&gt;not&lt;/strong&gt; content editors friendly.
+That&amp;rsquo;s why projects like Forestry are starting (is a brand new startup,  launched in mid 2016): to offer administration and content editor features with a Web interface for sites built with a static generator like Hugo or Jekyll, without forcing users to know Fit or how all this works under the hood. They will present a Wordpress like but much simpler Web interface and both a Markdown and a WYSIWYG editor.&lt;/p&gt;
+
+&lt;h2 id=&#34;in-a-nutshell&#34;&gt;In a nutshell&lt;/h2&gt;
+
+&lt;p&gt;Hugo is a powerful templating engine: offers internationalization and is possible to easily build reusable HTML snippets to embed code from external sources and data sources (plugins, without the trash). Also has blogging capabilities,  support different templates for different pages, automatically generates RSS, sitemap and so on. In short, Hugo does the templating engine part of a CMS solution.&lt;/p&gt;
+
+&lt;p&gt;A Hugo project contains the templates, the style and has a separate folder with the content, that is written in Markdown. Yes, the content is there, not in a database and this is &lt;strong&gt;good&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A Hugo website needs to be built to generate the actual HTML to be puslished. This means that everytime a template file or a content file in the Hugo project is modified, you have to run the Hugo build for your site to reflect the changes. Building a Hugo projects mean launching a script in the command line. Then you have to upload the updated HTML to the CDN where is published.&lt;/p&gt;
+
+&lt;p&gt;Is clear that this last two steps is where things get nasty for non techy people. This is exactly what we&amp;rsquo;re going to solve in this article.&lt;/p&gt;
+
+&lt;p&gt;Spoiler: we solve this using Forestry.io, the first of what I think will be a generation of product like this. There are a few pieces to put in line for this to work smoothly. We do not use a API-first CMS solution for a number of reason which I do not explain here but basically because is more complicated, very expensive and for most website is just an over-engineered solution that nobody really need.&lt;/p&gt;
+
+&lt;h2 id=&#34;how&#34;&gt;How&lt;/h2&gt;
+
+&lt;p&gt;Assume we have a Hugo project on a Git repository.
+We setup Forestry to do the build in the cloud for us. Forestry will get the code from somewhere, like the Git repository, build the source and publish the result to a CDN, like Amazon S3 or Github pages or, my choice, Aerobatic.
+This last choice allows me to have everything on Bitbucket: the source and the generated website, all in one convenient place.&lt;/p&gt;
+
+&lt;p&gt;Forestry will then provide the Web Dashboard for non-tech people to administer the site and create or edit content. Everytime a content file is edited and saved in Forestry, the change is pushed to the Git source branch. This triggers the build and the updated website is finally rendered in the Git hosting branch.&lt;/p&gt;
+
+&lt;p&gt;This means everytime content is saved from the Dashboard, a git push happen. Yes. Also means that everytime a push happens, the website is built. Yes, but &lt;strong&gt;I hope&lt;/strong&gt; with a timer.&lt;/p&gt;
+
+&lt;h2 id=&#34;advantages&#34;&gt;Advantages&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo is developer friendly. Wordpress and the rest are not. period. this meanse better development time, happier developers, higher productivity, higher codebase quality&lt;/li&gt;
+&lt;li&gt;Code is just HTML/CSS. Code is reusable. This is good.&lt;/li&gt;
+&lt;li&gt;Static sites are fast as hell. Users are happy, Google is happy and the marketing guys are very happy.&lt;/li&gt;
+&lt;li&gt;Markdown editor is good.&lt;/li&gt;
+&lt;li&gt;Easy way to load data from CSV or JSON files, without paying the load time to get them from API everytime (or create a cache)&lt;/li&gt;
+&lt;li&gt;Forestry dashboard is clean and simple, nothing useless there. Thinkg about your old CMS dashboard. Or don&amp;rsquo;t. Just relax, that&amp;rsquo;s the past.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;This will finally restore the balance in the Force and allow you to throw away tons of useless tools and code and plugins and cumbersome solutions that fixes a problem created by other cumbersome solutions.
+This is a clean and elegant solution which is also scalable and with high performance, at development time as well as at serving content to your user and to search engines.&lt;/p&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Avett Brothers - Divorce Separation Blues (clip and lyrics)</title>
+      <link>https://pipelean.aerobatic.io/post/avett-divorce/</link>
+      <pubDate>Mon, 23 Jan 2017 20:08:19 +0100</pubDate>
+      
+      <guid>https://pipelean.aerobatic.io/post/avett-divorce/</guid>
+      <description>&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/56dahg34hl0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+
+&lt;div &gt;
+
+&lt;iframe src=&#34;//www.musixmatch.com/lyrics/The-Avett-Brothers/Divorce-Separation-Blues/embed?theme=light&#34; style=&#34;border:none;background:transparent;&#34; width=&#34;100%&#34; height=&#34;960&#34; border=0&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gradients are back</title>
+      <link>https://pipelean.aerobatic.io/post/gradient/</link>
+      <pubDate>Thu, 12 Jan 2017 12:25:38 +0100</pubDate>
+      
+      <guid>https://pipelean.aerobatic.io/post/gradient/</guid>
+      <description>&lt;p&gt;Gradients are back, and it is a great news!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://pipelean.aerobatic.io/uploads/2017/01/23/Screenshot%20at%2019-26-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://pipelean.aerobatic.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pipelean.aerobatic.io/about/</guid>
+      <description>
+
+&lt;h4 id=&#34;failing-since-10-years-together&#34;&gt;Failing since 10 years, together&lt;/h4&gt;
+
+&lt;p&gt;We combine UX design with top-class and modern technology solutions with the experience to lead small teams to get the job done in a new way.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

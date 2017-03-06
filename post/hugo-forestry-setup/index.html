@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hugo website, Aerobatic CDN, Forestry.io web dashboard and Git to bind them all [Tutorial] &middot; Pipelean Limited - Strategic and Architectural task force for UX and Technology challenges</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Pipelean Limited">
+		<meta name="description" content="Strategic and Architectural task force for UX and Technology challenges">
+		<meta http-equiv="content-language" content="en-uk" />
+
+		
+		<meta name="og:site_name" content="Pipelean Limited - Strategic and Architectural task force for UX and Technology challenges">
+		<meta name="og:title" content="Hugo website, Aerobatic CDN, Forestry.io web dashboard and Git to bind them all [Tutorial]">
+		<meta name="og:url" content="https://pipelean.aerobatic.io/post/hugo-forestry-setup/">
+		<meta name="og:image" content="https://pipelean.aerobatic.io/images/avatar.jpg">
+		
+
+		<meta name="generator" content="Hugo 0.19" />
+
+		<!--[if lte IE 8]><script src='https://pipelean.aerobatic.io/js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://pipelean.aerobatic.io/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://pipelean.aerobatic.io//css/ie8.css"><![endif]-->
+		<link rel="icon" 
+		      type="image/png" 
+		      href="https://pipelean.aerobatic.io/images/favicon-32x32.png"
+		      sizes="32x32" />
+
+		
+		
+		<link rel="stylesheet" href="https://pipelean.aerobatic.io/css/pipelean.css">
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://pipelean.aerobatic.io/" class="image avatar"><img src="https://pipelean.aerobatic.io/images/avatar.jpg" alt="" /></a>
+	
+
+	
+		<nav id="sidebar" class="background">
+			<ul>
+			
+				<li><a href="https://pipelean.aerobatic.io/about">About</a></li>
+			
+				<li><a href="https://pipelean.aerobatic.io/post/">Blog</a></li>
+			
+				<li><a href="https://pipelean.aerobatic.io/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Hugo website, Aerobatic CDN, Forestry.io web dashboard and Git to bind them all [Tutorial]</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-01-26 12:15:00 &#43;0100 &#43;0100">2017 Jan 26</time>&nbsp;&nbsp;
+
+
+    
+    
+        <i class="fa fa-folder"></i>&nbsp;&nbsp;
+        
+        <a class="article-category-link" href="https://pipelean.aerobatic.io/categories/technology">technology</a>
+        
+        
+    
+
+
+
+   
+   
+       &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+       
+       <a class="article-category-link" href="https://pipelean.aerobatic.io/tags/cms">cms</a>
+       &middot;
+       
+       <a class="article-category-link" href="https://pipelean.aerobatic.io/tags/static">static</a>
+       &middot;
+       
+       <a class="article-category-link" href="https://pipelean.aerobatic.io/tags/serverless">serverless</a>
+       &middot;
+       
+       <a class="article-category-link" href="https://pipelean.aerobatic.io/tags/hugo">hugo</a>
+       &middot;
+       
+       <a class="article-category-link" href="https://pipelean.aerobatic.io/tags/tutorial">tutorial</a>
+       
+       
+   
+
+
+	</span>
+
+	<p>
+	    
+
+<p>A brief tutorial to create a completely static website with a template engine, deployed to a CDN and with an admin dashboard for your content editors.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>You are a programmer and know how to build websites and understand the difference between a static site, a template generator for static site and a server that generates HTML pages dynamically from templates and data.
+You&rsquo;re a little familiar with Jekyll or another static site generator: you know what they are and what they do, not necessarily already used once.
+You know Git and how to use it.</p>
+
+<p>You&rsquo;re not afraid of change.</p>
+
+<h2 id="why-and-how">Why and How</h2>
+
+<p>Is beyond the scope of this article and in general beyond the scopeto both convince anyone about how good is life with a static site generator in place of a Wordpress (or Drupal, Joomla, you name it&hellip;) or any PHP+MySQL+Server solution.</p>
+
+<p>There is, in fact, <a href="/post/cms-static-serverless">this article I wrote</a> on <strong>why</strong> build a CMS solution without a server and <strong>how</strong>. This other article is intended for a more generalist audience and explains what&rsquo;s enough to understand the general architectural idea and, most important, the advantages both at development time and for the website runtime performances. That article can be seen as an introduction to this one but is not a prerequisite.</p>
+
+<h1 id="step-by-step">Step by step</h1>
+
+<p>I will proceed with a step by step walktrough. If you&rsquo;d like to read about the general solution before for an high level overview of how this works, the aforementioned article is what you need now.</p>
+
+<h3 id="static-site-with-hugo">Static site with Hugo</h3>
+
+<p>Is beyond the scope of this article to explain how a Hugo website is built. It&rsquo;s not something you learn in 5 minutes but is pretty easy for the avarage programmer and one can be <a href="http://hugo.io/2-minutes-tutorial">generated in 2 minutes</a>. That, or just <a href="http://sample.site">grab a sample one</a> and move on.</p>
+
+<h3 id="git-on-bitbucket">Git on Bitbucket</h3>
+
+<p>Let&rsquo;s create a new private (and free) Git repository on bitbucket.
+Let&rsquo;s also create and push a new empty branch called &lsquo;hosting&rsquo; (or whatever you like, but in this article we&rsquo;ll refer to this branch with that label).</p>
+
+<p>Now you can &lsquo;git init&rsquo; your hugo project locally and push it to master. Not to hosting, just to master.</p>
+
+<h3 id="setup-the-cdn-aerobatic">Setup the CDN: Aerobatic</h3>
+
+<p>Now is time to setup Aerobatic, which will be the CDN where we publish our website. Aerobatic is a standalone product, but is seamlessy integrated with bitbucket, and this is very convenient.</p>
+
+<p>One: go to Aerobatic Settings in Bitbucket admin dashboard, create a new site with a new name. I will name it &ldquo;hugosample&rdquo; in this article. The the public URL will be hugosample.aerobatic.io and is now empty. Good.</p>
+
+<p>Two: in Settings -&gt; deploy branches: <a href="https://bitbucket.org/pipeleancom/pipeleancom/addon/aerobatic-bitbucket-addon/aerobatic-app-dashboard">https://bitbucket.org/pipeleancom/pipeleancom/addon/aerobatic-bitbucket-addon/aerobatic-app-dashboard</a> with the wrong branch.</p>
+
+<p>Now aerobatic is ready and will show on <a href="http://hugosample.aerobatic.io">http://hugosample.aerobatic.io</a> whatever you have on the hosting branch. Now you do not have anything cause someone have to build your hugo website like you do locally from the command line. Who&rsquo;s going to do it?</p>
+
+<h3 id="write-some-config-one-line">Write some config (one line)</h3>
+
+<p>Ok, now we have almost all the pieces in place.</p>
+
+<p>Hugo sites has a main cofiguration file, called config.toml, in the project root. Open it, edit the baseURL property, which is normally the first line in the file, to something like:</p>
+
+<p>baseurl = &ldquo;<a href="https://samplesite.aerobatic.io/&quot;">https://samplesite.aerobatic.io/&quot;</a></p>
+
+<p>Important: The final slash MUST be there, or your resources will not load properly.<br />
+I know. I hate it too.  We can live with that.</p>
+
+<h3 id="build-hugo-in-the-cloud">Build Hugo in the cloud</h3>
+
+<p>Forestry will both build your Hugo project from master to hosting.</p>
+
+<p>Signin to Forestry.io and create a new site. You&rsquo;ll be asked for a repository and a hosting site. Pick bitbucket for both. Use &ldquo;master&rdquo; branch as repository and &ldquo;hosting&rdquo; branch for hosting.</p>
+
+<p>[pictures]</p>
+
+<p>Check Forestry build status icon [picture]
+Now check your Bitbucket repository commit. You should see something like this: [picture del commit su master, poi su master di forestry e poi su hosting sempre di forestry. ]</p>
+
+<h3 id="try-it-the-web-dashboard">Try it: the web dashboard</h3>
+
+<p>Forestry also provides a Web Dashboard to administer the site and for the content editors to do their job.</p>
+
+<p>Let&rsquo;s open the project, create a new content and write something.</p>
+
+<p>Click preview. Does the preview works? Good.
+Now publish it. There is very good chance that Forestry has succesfully built the Hugo project and pushed the result to the Git repository &lsquo;hosting&rsquo; branch which is finally published on your site.
+Go to your like <a href="http://samplehugo.aerobatic.io">http://samplehugo.aerobatic.io</a>.</p>
+
+<p>Do you see your site with your new content? Great!</p>
+
+<p>You&rsquo;re all set. The good guys have won.</p>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+
+<p>Doesn&rsquo;t work? I know, it does never work the first time. Here are a few things that could have gone wrong.</p>
+
+<ul>
+<li>If the Hugo theme is a git submodule, you MUST have the .gitmodules file or Forestry won&rsquo;t be able to checkout the whole code and so can&rsquo;t built Hugo site.</li>
+<li>in config.toml, baseUrl MUST contain the final slash!</li>
+<li>is baseURL correct? Really?</li>
+</ul>
+
+<p>Still doesn&rsquo;t work? Ok, <a href="http://twitter.com/ildella">leave me a tweet</a></p>
+
+<h3 id="bonus-tip">Bonus tip</h3>
+
+<p>use bitbucket branch permission feature and allow no one to write on &ldquo;hosting&rdquo; and only trusted people to write on master. Forestry will continue to work as expected, you do not need to explicitely add a user for forestry inside bitbucket permission settings.</p>
+
+<h2 id="advanced-topics">Advanced topics</h2>
+
+<p>Some advanced topics we&rsquo;ve faced to solve customers needs using this solution. A few are very hugo-specific, other need to be solved at the architecture level.</p>
+
+<ul>
+<li>create hugo shortcodes: musixmatch</li>
+<li>dynamic content example: features</li>
+<li>creating a dev instance connected to a different branch: dev branch for the source, and dev-hosting. invece di farlo fare a forestry, e poi push a mano</li>
+<li>asset management, galleries etc&hellip; use the cloud, stupid!</li>
+<li>latest hugo version has packages on git repo project <a href="https://github.com/spf13/hugo/releases">https://github.com/spf13/hugo/releases</a> including the Ubuntu/Debian .deb package</li>
+<li>challenge 1: automatically import dynamic content</li>
+<li>challenge 2: let hugo render pages ready with Facebook Instant access code</li>
+</ul>
+
+<p>Get in touch if you want to know more about these topics. You can send us a message or schedule a call: we offer a 10 minutes introduction or 20 minutes consultancy format, for free of course. Choose <a href="/page/get-in-touch">your way to get in touch</a>.</p>
+
+<p>We know that digitalize your business is hard, we&rsquo;re to offer a first aid kit that can eventually become a stable relation.</p>
+
+<h2 id="external-references">External References</h2>
+
+<ul>
+<li><a href="https://hugostatic.io">Hugo</a></li>
+<li><a href="https://bitbucket.com">Bitbucket</a></li>
+<li><a href="https://aerobatic.io">Aerobatic</a></li>
+<li><a href="https://forestry.io">Forestry.io</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ildella';
+    var disqus_identifier = 'https:\/\/pipelean.aerobatic.io\/post\/hugo-forestry-setup\/';
+    var disqus_title = 'Hugo website, Aerobatic CDN, Forestry.io web dashboard and Git to bind them all [Tutorial]';
+    var disqus_url = 'https:\/\/pipelean.aerobatic.io\/post\/hugo-forestry-setup\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/ildella" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/ildella" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="danieledellafiore" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://pipelean.aerobatic.io/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+		<li><a href="https://pipelean.aerobatic.io/index.xml" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Pipelean Limited, 2017</li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://pipelean.aerobatic.io/js/jquery.min.js"></script>
+<script src="https://pipelean.aerobatic.io/js/jquery.poptrox.min.js"></script>
+<script src="https://pipelean.aerobatic.io/js/skel.min.js"></script>
+<script src="https://pipelean.aerobatic.io/js/util.js"></script>
+
+<script src="https://pipelean.aerobatic.io/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-28480200-3', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>
