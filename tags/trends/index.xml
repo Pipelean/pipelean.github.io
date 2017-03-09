@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trends on Pipelean Limited - Exquisite Technology</title>
-    <link>https://pipelean.github.io/tags/trends/index.xml</link>
-    <description>Recent content in Trends on Pipelean Limited - Exquisite Technology</description>
+    <title>Trends on Pipelean</title>
+    <link>localhost:1313</link>
+    <description>Recent content in Trends on Pipelean</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>Everything is mine</copyright>
-    <atom:link href="https://pipelean.github.io/tags/trends/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gradients are back</title>
-      <link>https://pipelean.github.io/post/gradient/</link>
+      <link>localhost:1313</link>
       <pubDate>Thu, 12 Jan 2017 12:25:38 +0100</pubDate>
       
-      <guid>https://pipelean.github.io/post/gradient/</guid>
+      <guid>localhost:1313</guid>
       <description>&lt;p&gt;Gradients are back, and it is a great news!&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s nothing better than gradients in this world.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://pipelean.github.io/uploads/2017/01/23/Screenshot%20at%2019-26-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;localhost:1313/uploads/2017/01/23/Screenshot%20at%2019-26-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
