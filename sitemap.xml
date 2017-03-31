@@ -2,96 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>localhost:1313</loc>
-    <lastmod>2017-01-28T12:19:22+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/post/cms-static-serverless/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/post/gradient/</loc>
     <lastmod>2017-01-12T12:25:38+01:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/</loc>
     <lastmod>2017-01-12T12:25:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/about/</loc>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/cms/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/categories/design/</loc>
     <lastmod>2017-01-12T12:25:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
-    <lastmod>2017-01-28T12:19:22+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/post/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/serverless/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/solution/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/static/</loc>
     <lastmod>2017-01-25T18:18:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://pipelean.com/categories/technology/</loc>
+    <lastmod>2017-01-25T18:18:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://pipelean.com/tags/trends/</loc>
     <lastmod>2017-01-12T12:25:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://pipelean.com/tags/visual/</loc>
     <lastmod>2017-01-12T12:25:38+01:00</lastmod>
     <priority>0</priority>
   </url>

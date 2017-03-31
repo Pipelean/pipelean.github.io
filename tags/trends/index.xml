@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trends on Pipelean</title>
-    <link>localhost:1313</link>
+    <link>http://pipelean.com/tags/trends/index.xml</link>
     <description>Recent content in Trends on Pipelean</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <language>en-uk</language>
+    <atom:link href="http://pipelean.com/tags/trends/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gradients are back</title>
-      <link>localhost:1313</link>
+      <link>http://pipelean.com/post/gradient/</link>
       <pubDate>Thu, 12 Jan 2017 12:25:38 +0100</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://pipelean.com/post/gradient/</guid>
       <description>&lt;p&gt;Gradients are back, and it is a great news!&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s nothing better than gradients in this world.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;localhost:1313/uploads/2017/01/23/Screenshot%20at%2019-26-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://pipelean.com/uploads/2017/01/23/Screenshot%20at%2019-26-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
